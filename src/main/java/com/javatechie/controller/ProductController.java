@@ -28,13 +28,14 @@ public class ProductController {
     @GetMapping("/{id}/sync")
     public ResponseEntity<ProductDetailDTO> getProductSync(@PathVariable Long id) {
         log.info("Rest request to get product by id sync: {}", id);
-		System.out.println("Rest request to get product by id synchronous: {}", id);
+		System.out.println("Rest request to get product by id synchrous: {}", id);
         return ResponseEntity.ok(productSyncFacade.getProductDetails(id));
     }
 
     @GetMapping("/{id}/async")
     public ResponseEntity<ProductDetailDTO> getProductAsync(@PathVariable Long id) {
         log.info("Rest request to get product by id async: {}", id);
+		System.out.println("Hello");
         return ResponseEntity.ok(productASyncFacade.getProductDetails(id));
     }
 
