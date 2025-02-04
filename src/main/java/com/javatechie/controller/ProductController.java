@@ -28,7 +28,7 @@ public class ProductController {
     @GetMapping("/{id}/sync")
     public ResponseEntity<ProductDetailDTO> getProductSync(@PathVariable Long id) {
         log.info("Rest request to get product by id sync: {}", id);
-		System.out.println("Rest request to get product by id sync: {}", id);
+		System.out.println("Rest request to get product by id synchronous: {}", id);
         return ResponseEntity.ok(productSyncFacade.getProductDetails(id));
     }
 
