@@ -35,6 +35,7 @@ public class ProductController {
     @GetMapping("/{id}/async")
     public ResponseEntity<ProductDetailDTO> getProductAsync(@PathVariable Long id) {
         log.info("Rest request to get product by id async: {}", id);
+		System.out.println("Hello");
         return ResponseEntity.ok(productASyncFacade.getProductDetails(id));
     }
 
